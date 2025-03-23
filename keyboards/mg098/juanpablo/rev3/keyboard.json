@@ -1,38 +1,27 @@
 {
-    "keyboard_name": "juan_pablo_v2",
+    "keyboard_name": "Juan Pablo v3",
     "manufacturer": "Michal Golab",
     "url": "",
     "maintainer": "MG098",
     "usb": {
         "device_version": "1.2.0",
         "pid": "0x0000",
-        "vid": "0xFEED"
+        "vid": "0xFEED",
+        "no_startup_check": true
     },
     "bootloader": "rp2040",
     "processor": "RP2040",
     "features": {
-        "bootmagic": true,
+        "bootmagic": false,
         "command": true,
-        "console": true,
-        "extrakey": true,
-        "mousekey": true,
+        "extrakey": false,
+        "mousekey": false,
         "nkro": false
     },
-    "diode_direction": "COL2ROW",
+    "diode_direction": "ROW2COL",
     "matrix_pins": {
         "cols": ["GP5", "GP6", "GP7", "GP8", "GP9", "GP10", "GP11", "GP12", "GP13"],
         "rows": ["GP0", "GP1", "GP2", "GP3", "GP4"]
-    },
-    "split": {
-        "enabled": true,
-        "main": "left",
-        "soft_serial_pin": "GP28",
-        "transport": {
-            "protocol": "serial"
-        },
-        "usb_detect": {
-            "enabled": true
-          }
     },
     "encoder": {
         "rotary": [
@@ -40,31 +29,42 @@
         ]
     },
     "bootmagic": {
-        "enabled": true,
+        "enabled": false,
         "matrix": [0, 0]
     },
-    "rgblight": {
-        "led_count": 71,
-        "pin": "GP20",
-        "hue_steps": 10,
-        "saturation_steps": 17,
-        "brightness_steps": 17,
-        "sleep": false,
-        "split": true,
-        "split_count": [30, 41],
-        "animations": {
-            "alternating": true,
-            "breathing": true,
-            "christmas": true,
-            "knight": true,
-            "rainbow_mood": true,
-            "rainbow_swirl": true,
-            "rgb_test": true,
-            "snake": true,
-            "static_gradient": true,
-            "twinkle": true
+
+    "split": {
+        "enabled": true,
+        "serial": {
+            "driver": "vendor",
+            "pin": "GP28"
+        },
+        "main": "left",
+        "handedness": {
+            "pin": "GP24"
+        },
+
+        "transport": {
+            "protocol": "serial",
+            "sync": {
+                "activity": true,
+                "detected_os": true,
+                "haptic": true,
+                "layer_state": true,
+                "indicators": true,
+                "matrix_state": true,
+                "modifiers": true,
+                "oled": true,
+                "st7565": true,
+                "wpm": true
+            }
         }
     },
+
+    "rgblight": {
+        "split_count": [30, 41]
+    },
+
     "layouts": {
         "LAYOUT_split_69": {
             "layout": [
@@ -151,7 +151,7 @@
                 { "label": "Down",          "matrix": [9, 7], "x": 14, "y": 4 },
                 { "label": "Right",         "matrix": [9, 8], "x": 15, "y": 4 }
 
-                
+
 
             ]
         }

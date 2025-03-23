@@ -11,7 +11,7 @@
     #define SPI_MISO_PIN GP16
 
     #define BLUEFRUIT_LE_SCK_DIVISOR 128
-    #define BLUEFRUIT_LE_RST_PIN GP0    //has to be declared something, unused pin
+    #define BLUEFRUIT_LE_RST_PIN GP12    //has to be declared something, unused pin (GP12 on LEFT)
     #define BLUEFRUIT_LE_CS_PIN  GP17
     #define BLUEFRUIT_LE_IRQ_PIN GP23
     #define BATTERY_LEVEL_PIN    GP29    //has to be declared something, unused pin
@@ -33,18 +33,22 @@
 #endif
 
 #ifdef SPLIT_KEYBOARD
-    //#define MASTER_LEFT
-    //#define SPLIT_HAND_PIN GP25         //not needed?
-    #define USB_VBUS_PIN GP24
-    //#define SOFT_SERIAL_PIN GP25
-    //#define SERIAL_USART_TX_PIN GP25 //redefinition?
+    #define SERIAL_DEBUG
+    #define MASTER_LEFT
+    // #define SPLIT_HAND_PIN GP24         //not needed?
+    // #define USB_VBUS_PIN GP24        //deprecated?
+    // #define SOFT_SERIAL_PIN GP28
+    // #define SERIAL_USART_TX_PIN GP28 //redefinition?
     #define SERIAL_PIO_USE_PIO1
+    #define FORCED_SYNC_THROTTLE_MS 100
     #define SPLIT_MAX_CONNECTION_ERRORS 10
-    #define SPLIT_LAYER_STATE_ENABLE
-    #define SPLIT_LED_STATE_ENABLE
-    #define SPLIT_WPM_ENABLE
+    #define SPLIT_CONNECTION_CHECK_TIMEOUT 500
+    // #define SPLIT_LAYER_STATE_ENABLE
+    // #define SPLIT_LED_STATE_ENABLE
+    // #define SPLIT_WPM_ENABLE
+
     //#define RGBLIGHT_SPLIT    //redefinition, to be removed
-    #define SPLIT_TRANSPORT_MIRROR
+    // #define SPLIT_TRANSPORT_MIRROR
     #define SPLIT_TRANSACTION_IDS_USER BATTERY_SYNC
 #endif
 
@@ -55,7 +59,7 @@
     #define RGB_MATRIX_HUE_STEP 8
     #define RGB_MATRIX_SAT_STEP 8
     #define RGB_MATRIX_VAL_STEP 8
-    #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 127
+    // #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 127
     #define RGB_MATRIX_KEYPRESSES
     #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 
