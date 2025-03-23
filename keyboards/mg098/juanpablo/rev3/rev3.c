@@ -46,4 +46,8 @@ void suspend_wakeup_init_kb(void)
     rgb_matrix_set_suspend_state(false);
 }
 
+// void board_init(void) {
+//     gpio_set_pin_output(GP12);
+//     gpio_write_pin_high(GP12);
+// }
 #endif

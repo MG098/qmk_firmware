@@ -3,6 +3,7 @@
 #include QMK_KEYBOARD_H
 #include "raw_hid.h"
 #include "analog.h"
+#include "quantum.h"
 
 #include <string.h>
 #include <stdio.h>
@@ -133,10 +134,10 @@ void keyboard_post_init_user(void) {
     bool dip_switch_update_user(uint8_t index, bool active) {
         switch (index) {
             case 0:
-                if(active) { set_output(OUTPUT_USB); } else {  }
+                if(active) { set_output(OUTPUT_BLUETOOTH); } else {  }
                 break;
             case 1:
-                if(active) { set_output(OUTPUT_BLUETOOTH); } else {  }
+                if(active) { set_output(OUTPUT_USB); } else {  }
                 break;
         }
         return true;

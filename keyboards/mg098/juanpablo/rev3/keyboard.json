@@ -9,6 +9,9 @@
         "vid": "0xFEED",
         "no_startup_check": true
     },
+    "bluetooth": {
+        "driver": "bluefruit_le"
+    },
     "bootloader": "rp2040",
     "processor": "RP2040",
     "features": {
@@ -20,7 +23,7 @@
     },
     "diode_direction": "ROW2COL",
     "matrix_pins": {
-        "cols": ["GP5", "GP6", "GP7", "GP8", "GP9", "GP10", "GP11", "GP12", "GP13"],
+        "cols": ["GP5", "GP6", "GP7", "GP8", "GP9", "GP10", "GP11", null, null],
         "rows": ["GP0", "GP1", "GP2", "GP3", "GP4"]
     },
     "encoder": {
@@ -35,6 +38,12 @@
 
     "split": {
         "enabled": true,
+        "matrix_pins": {
+            "right":{
+                "cols": ["GP5", "GP6", "GP7", "GP8", "GP9", "GP10", "GP11", "GP12", "GP13"],
+                "rows": ["GP0", "GP1", "GP2", "GP3", "GP4"]
+            }
+        },
         "serial": {
             "driver": "vendor",
             "pin": "GP28"

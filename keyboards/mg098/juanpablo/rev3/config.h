@@ -10,7 +10,7 @@
     #define SPI_MOSI_PIN GP19
     #define SPI_MISO_PIN GP16
 
-    #define BLUEFRUIT_LE_SCK_DIVISOR 128
+    #define BLUEFRUIT_LE_SCK_DIVISOR 128        //128 -> 1MHz max 4MHz
     #define BLUEFRUIT_LE_RST_PIN GP12    //has to be declared something, unused pin (GP12 on LEFT)
     #define BLUEFRUIT_LE_CS_PIN  GP17
     #define BLUEFRUIT_LE_IRQ_PIN GP23
@@ -128,7 +128,7 @@
 
 /* disable debug print */
 //#define NO_DEBUG
-
+// #define DEBUG_MATRIX_SCAN_RATE
 /* disable print */
 //#define NO_PRINT
 
