@@ -145,7 +145,7 @@ void keyboard_post_init_user(void) {
     #endif
 #endif
 
-#ifdef ENCODER_ENABLE
+// #ifdef ENCODER_ENABLE
 bool encoder_update_user(uint8_t index, bool clockwise) {       //add more options based on FN layer
      if (get_highest_layer(layer_state|default_layer_state) == 0) {  //main layer
         if (index == 0) { /* First encoder */
@@ -190,8 +190,8 @@ bool encoder_update_user(uint8_t index, bool clockwise) {       //add more optio
     }
         return false;
 }
-#endif
-/*
+// #endif
+
 void matrix_scan_user(void) {
   if (is_alt_tab_active) {
     if (timer_elapsed(alt_tab_timer) > 1000) {
@@ -200,7 +200,7 @@ void matrix_scan_user(void) {
     }
   }
 }
-*/
+
 #ifdef OLED_ENABLE
     #ifdef RAW_ENABLE
 
@@ -398,7 +398,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (record->event.pressed) {
             for(int i=0; i<100; i++)
             {
-                SEND_STRING("China best\n");
+                // SEND_STRING("China best\n");
             }
         } else { }
         break;
