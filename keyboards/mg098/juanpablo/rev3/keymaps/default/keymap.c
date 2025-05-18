@@ -290,7 +290,7 @@ const char *read_logo(void) {
 
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
-    if (!is_keyboard_master()) {
+    if (!is_keyboard_left()) {
         return OLED_ROTATION_180;  // flips the display 180 degrees if offhand
     }
 
@@ -299,7 +299,7 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 
 bool oled_task_user(void) { //to include different make options
 
-    if (is_keyboard_master()) {
+    if (is_keyboard_left()) {
         //add different screens to no-HID mode too
         #ifdef RAW_ENABLE
         if (is_hid_connected){
