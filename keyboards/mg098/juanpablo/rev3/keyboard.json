@@ -1,10 +1,10 @@
 {
     "keyboard_name": "Juan Pablo v3",
-    "manufacturer": "Michal Golab",
+    "manufacturer": "MG",
     "url": "",
     "maintainer": "MG098",
     "usb": {
-        "device_version": "1.2.0",
+        "device_version": "3.0",
         "pid": "0x0000",
         "vid": "0xFEED",
         "no_startup_check": true
@@ -28,7 +28,7 @@
     },
     "encoder": {
         "rotary": [
-            { "pin_a": "GP21", "pin_b": "GP22", "resolution": 2 }
+            { "pin_a": "GP21", "pin_b": "GP22", "resolution": 4 }
         ]
     },
     "bootmagic": {
