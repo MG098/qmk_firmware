@@ -1,4 +1,3 @@
-# This file intentionally left blank
 RGB_MATRIX_ENABLE = yes
 RGB_MATRIX_DRIVER = ws2812
 WS2812_DRIVER = vendor
@@ -14,6 +13,6 @@ RAW_ENABLE = yes
 CONSOLE_ENABLE = yes
 
 DIP_SWITCH_ENABLE = yes
-BLUETOOTH_ENABLE = no
-# BLUETOOTH_DRIVER = bluefruit_le
+# BLUETOOTH_ENABLE = yes	#comment this line out for RIGHT keyboard
+BLUETOOTH_DRIVER = bluefruit_le
 SAMPLE_BATTERY = no

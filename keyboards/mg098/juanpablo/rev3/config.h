@@ -54,6 +54,8 @@
 
 #ifdef RGB_MATRIX_ENABLE    //to be fine tuned in FINAL
     #define WS2812_DI_PIN GP20
+    #define RGB_MATRIX_SLEEP
+    #define RGB_MATRIX_TIMEOUT 30000
     // #define RGB_DISABLE_WHEN_USB_SUSPENDED true //untested
     #define RGB_MATRIX_LED_COUNT 71
     #define RGB_MATRIX_HUE_STEP 8
